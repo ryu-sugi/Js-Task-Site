@@ -1,0 +1,38 @@
+header {
+ height: 100px;
+ background-color:  #f0f0f0;
+}
+
+.heading {
+ display: flex;
+}
+
+.title {
+ font-size: 30px;
+ padding: 35px 30px 20px 40px;
+}
+
+.hamb-menu {
+ margin-left: auto;
+ margin-right: 30px;
+}
+
+.hamb-menu #open {
+ font-size: 40px;
+ cursor: pointer;
+}
+
+.hamb-menu #close {
+ font-size: 40px;
+ cursor: pointer;
+
+}
+
+
+
+.main-image {
+ width: 100%;
+ height: 600px;
+}
+
+
