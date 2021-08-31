@@ -23,11 +23,11 @@ for (let i = 0; i < menu.length; i++) { // for文で要素にクリックイベ�
 {
 const open = document.getElementById("open");
 
- // querySelectorを使用する事でCSSセレクタを取得してくる
- const overlay = document.querySelector('.overlay');
+// querySelectorを使用する事でCSSセレクタを取得してくる
+const overlay = document.querySelector('.overlay');
 
- // HTMLから'close'IDを取得してくる
- const close = document.getElementById('close');
+// HTMLから'close'IDを取得してくる
+const close = document.getElementById('close');
 
  // クリックする事でイベント発火させる為の記述
  open.addEventListener('click', () => {
