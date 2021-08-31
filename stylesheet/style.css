@@ -9,7 +9,7 @@ header {
 }
 
 main {
- margin-top: 100px;
+ margin-top: 40px;
  margin-bottom: 100px;
 }
 
@@ -61,6 +61,7 @@ footer {
 
 .accordion {
  width: 15%;
+ margin-top: 40px;
 }
 
 .menu {
@@ -69,16 +70,13 @@ footer {
  font-size: 18px;
  padding: 10px;
  cursor: pointer;
- user-select: none;
 }
 
 .contents {
  text-align: center;
  line-height: 0;
  height: 0;
- overflow: hidden;
  opacity: 0;
- transition-duration: 0.4s;
 }
 
 .contents.is-open {
@@ -87,4 +85,48 @@ footer {
  line-height: normal;
  height: auto;
  opacity: 1;
+}
+/* ↑アコーディオンメニューに関する記述 */
+
+/* ↓ハンバーガーメニューに関する記述 */
+.sp-menu #open {
+ justify-content: right;
+ font-size: 40px;
+ line-height: 64px;
+ cursor: pointer;  /* 指定した場所でカーソルの形を変形させる */
+}
+
+.overlay {
+ height: 50px;
+ text-align: center;
+ padding: 64px;
+ opacity: 0;
+ pointer-events: none;
+ transition: opacity .6s;  /* menu close時のアニメーション設定 */
+ background:  rgba(125, 125, 125, 0.95);
+}
+
+.overlay.show {
+  opacity: 1; 
+  pointer-events: auto; /* クリックした後カーソル変化させる為の記述 */
+}
+
+.overlay #close {
+ top: 16px;
+ left: 16px;
+ font-size: 32px;
+ cursor: pointer;
+}
+
+.overlay ul {
+ list-style: none;
+}
+
+.overlay li {
+ margin-top: 50px; 
+}
+
+.overlay a {
+ color: white;
+ text-decoration: none;
 }
