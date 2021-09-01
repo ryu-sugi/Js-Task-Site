@@ -9,13 +9,13 @@ header {
 }
 
 main {
- margin-top: 100px;
- margin-bottom: 100px;
+ margin-top: 40px;
+ margin-bottom: 50px;
 }
-
 .title {
+ white-space: nowrap; /* タイトルを一行でまとめる為の記述 */ 
  font-size: 30px;
- padding: 35px 30px 20px 400px;
+ padding: 35px 450px 20px 400px;
 }
 
 .hamb-menu {
@@ -56,3 +56,110 @@ footer {
  width: 85%;
  height: 40px;
 }
+
+/* ↓アコーディオンメニュー記述 */
+
+section {
+ width: 15%;
+ margin-top: 40px;
+}
+
+.menu {
+ background-color:  #563f00;
+ color: white;
+ font-size: 18px;
+ padding: 10px;
+ cursor: pointer;
+}
+
+.menu-title {
+ background-color:  #563f00;
+ font-size: 18px;
+ padding: 10px;
+ color: white;
+ border-bottom: solid white 1px;
+}
+
+.contents {
+ text-align: center;
+ line-height: 0;
+ height: 0;
+ opacity: 0;
+}
+
+.contents.is-open {
+ border: 1px solid black;
+ padding: 10px;
+ line-height: normal;
+ height: auto;
+ opacity: 1;
+}
+/* ↑アコーディオンメニューに関する記述 */
+
+/* ↓ハンバーガーメニューに関する記述 */
+
+.sp-menu {
+ position: relative;
+ text-align: right;
+ margin: 15px 0 0 0px;
+}
+
+.sp-menu #open {
+ justify-content: right;
+ font-size: 40px;
+ line-height: 64px;
+ cursor: pointer;  /* 指定した場所でカーソルの形を変形させる */
+}
+
+.sp-menu #close {
+ justify-content: right;
+ font-size: 40px;
+ line-height: 64px;
+ cursor: pointer;  /* 指定した場所でカーソルの形を変形させる */
+}
+
+
+.overlay {
+ width: 5%;
+ padding: 50px;
+ opacity: 0;
+ pointer-events: none;
+ transition: opacity .6s;  /* menu close時のアニメーション設定 */
+ background:  #563f00;
+ position: fixed; /* open時のメニューの中身を右寄せにする為の記述 */
+ right: 0; /* open時のメニューの中身を右寄せにする為の記述 */
+}
+
+.overlay.show {
+  opacity: 1; 
+  pointer-events: auto; /* クリックした後カーソル変化させる為の記述 */
+}
+
+.overlay #close {
+
+ font-size: 40px;
+ line-height: 64px;
+ cursor: pointer;
+}
+
+.overlay ul {
+ list-style: none;
+}
+
+.overlay li {
+ margin-top: 50px; 
+}
+
+.overlay a {
+ color: white;
+ text-decoration: none;
+}
+
+.main-text {
+ margin-top: 50px;
+ text-align: center;
+}
+
+.sp-menu-close {
+}
+ 
