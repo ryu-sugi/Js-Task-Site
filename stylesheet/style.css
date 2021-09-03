@@ -34,7 +34,7 @@ main {
 
 }
 
-/* スライドショーに関する記述 */
+/* ↓スライドショーに関する記述 */
 .image {
   overflow: hidden;
   position: relative; /* 矢印の位置を固定する為の記述 */
@@ -48,6 +48,7 @@ main {
 
 .image ul {
  display: flex;
+ transition: transform .3s;
 }
 
 .image li {
@@ -64,6 +65,12 @@ main {
   color: white;
   position: absolute; /* 矢印の位置を固定する為の記述 */
   top: 300px;
+  cursor: pointer;
+}
+
+#prev:hover,
+#next:hover {
+  opacity: .7;
 }
 
 #prev {
@@ -73,7 +80,7 @@ main {
 #next {
   right: 0;
 }
-/* スライドショーに関する記述 */
+/* ↑スライドショーに関する記述 */
 
 
 footer {
@@ -95,7 +102,6 @@ footer {
 }
 
 /* ↓アコーディオンメニュー記述 */
-
 section {
  width: 15%;
  margin-top: 40px;
@@ -168,6 +174,8 @@ section {
 .overlay.show {
   opacity: 1; 
   pointer-events: auto; /* クリックした後カーソル変化させる為の記述 */
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 
 .overlay #close {

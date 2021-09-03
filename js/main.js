@@ -41,3 +41,18 @@ const close = document.getElementById('close');
 });
 }
 // ハンバーガーメニューに関する記述
+
+// スライドショーに関する記述
+{
+  const next = document.getElementById('next');
+  const ul = document.querySelector('.image ul');
+  const prev = document.getElementById('prev');
+
+  next.addEventListener('click', () => {
+    ul.style.transform = 'translateX(-100%)';
+  });
+
+  prev.addEventListener('click', () => {
+    ul.style.transform = 'translateX(100%)';
+  });
+}
